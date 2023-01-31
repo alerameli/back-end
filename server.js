@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3002;
 const url = process.env.DATABASE_URL;
 
 mongoose.set("strictQuery", true);
-mongoose.connect('url');
+mongoose.connect(url);
 
 //Get information for the public page
 app.get("/", async (req, res) => {
