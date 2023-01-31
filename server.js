@@ -15,8 +15,9 @@ app.use(express.json());
 app.use(cors());
 
 const PORT=process.env.PORT || 3002;
+const url=process.env.mongourl;
 
-mongoose.connect("mongodb+srv://admin-alejandro:are.06.05.99@cluster0.1oyyt.mongodb.net/cv?retryWrites=true&w=majority");
+mongoose.connect(url);
 
 //Get information for the public page
 app.get("/",async(req,res)=>{
