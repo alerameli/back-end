@@ -16,9 +16,9 @@ app.use(express.json());
 app.use(cors());
 
 const PORT=process.env.PORT || 3002;
-const url=process.env.mongourl;
+const url=process.env.DATABASE_URL;
 
-mongoose.connect(url);
+mongoose.connect(DATABASE_URL);
 
 //Get information for the public page
 app.get("/",async(req,res)=>{
