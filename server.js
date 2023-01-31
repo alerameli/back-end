@@ -18,6 +18,7 @@ app.use(cors());
 const PORT=process.env.PORT || 3002;
 const url=process.env.DATABASE_URL;
 
+mongoose.set("strictQuery", false);
 mongoose.connect(url);
 
 //Get information for the public page
